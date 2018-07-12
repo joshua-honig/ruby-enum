@@ -1,0 +1,46 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 120
+
+MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*spec.rb'
+
+TrailingCommaInArguments:
+  Enabled: false
+
+TrailingCommaInArrayLiteral:
+  Enabled: false
+
+WordArray:
+  Enabled: false
+
+# Style
+
+Layout/IndentationWidth:
+  # Number of spaces for each indentation level.
+  Width: 2
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+GlobalVars:
+  AllowedVariables:
+    - $redis
