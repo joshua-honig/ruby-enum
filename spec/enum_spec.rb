@@ -14,17 +14,21 @@ RSpec.describe Enum do
 end
 
 class DbOps < Enum
-  INSERT = init 'insert', 1
-  SELECT = init 'select', 2
-  UPDATE = init 'update', 3
-  DELETE = init 'delete', 4
+  # INSERT = init 'insert', 1
+  # SELECT = init 'select', 2
+  # UPDATE = init 'update', 3
+  # DELETE = init 'delete', 4
+  #
+  # CREATE = init 'create', 1
+  # READ   = init 'read', 2
 
-  CREATE = init 'create', 1
+  define 'insert', 1
+  define 'select', 2
+  define 'update', 3
+  define 'delete', 4
+
+  define 'create', 1
   define 'read', 2
-
-  def self.READIT
-    self::SELECT
-  end
 end
 
 RSpec.describe 'Derived Enum Class' do
